@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
-public class Solution {
-    public static int[] twoSum(int[] nums, int target) {
+public class Q001_TwoSum {
+    public int[] twoSum(int[] nums, int target) {
         int[] result = new int[2];
 
 //        Method_01
