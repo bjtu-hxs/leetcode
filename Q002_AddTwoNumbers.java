@@ -21,12 +21,8 @@ class Q002_AddTwoNumbers {
             current.val = (l1 != null ? l1.val : 0) + (l2 != null ? l2.val : 0) + carry;
             carry = current.val / 10;
             current.val = current.val % 10;
-            if (l1 != null) {
-                l1 = l1.next;
-            }
-            if (l2 != null) {
-                l2 = l2.next;
-            }
+            l1 = l1 != null ? l1.next : null;
+            l2 = l2 != null ? l2.next : null;
         }
         return root.next;
         */
@@ -43,12 +39,8 @@ class Q002_AddTwoNumbers {
             current.val = (l1 != null ? l1.val : 0) + (l2 != null ? l2.val : 0) + carry;
             carry = current.val / 10;
             current.val = current.val % 10;
-            if (l1 != null) {
-                l1 = l1.next;
-            }
-            if (l2 != null) {
-                l2 = l2.next;
-            }
+            l1 = l1 != null ? l1.next : null;
+            l2 = l2 != null ? l2.next : null;
         }
 
         if (carry == 1){
@@ -71,12 +63,8 @@ class Q002_AddTwoNumbers {
             tmp = tmp % 10;
             current.next = new ListNode(tmp);
             current = current.next;
-            if (l1 != null) {
-                l1 = l1.next;
-            }
-            if (l2 != null) {
-                l2 = l2.next;
-            }
+            l1 = l1 != null ? l1.next : null;
+            l2 = l2 != null ? l2.next : null;
         }
 
         if (carry == 1){
