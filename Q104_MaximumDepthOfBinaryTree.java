@@ -11,15 +11,11 @@
 public class Q104_MaximumDepthOfBinaryTree {
     // Method_01  0ms  100%
     public int maxDepth(TreeNode root) {
-        return numOfChildren(root);
-    }
-
-    private static int numOfChildren(TreeNode parent) {
-        if (parent == null) {
+        if (root == null) {
             return 0;
         }
-        int lDepth = numOfChildren(parent.left);
-        int rDepth = numOfChildren(parent.right);
+        int lDepth = maxDepth(root.left);
+        int rDepth = maxDepth(root.right);
         return lDepth > rDepth ? lDepth + 1 : rDepth + 1;
     }
 }

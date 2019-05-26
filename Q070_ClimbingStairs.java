@@ -16,8 +16,9 @@ public class Q070_ClimbingStairs {
     public int climbStairs(int n) {
         int f0 = 1;
         int f1 = 1;
+        int f;
         for (int i = 1; i < n; i++) {
-            int f = f1;
+            f = f1;
             f1 += f0;
             f0 = f;
         }

@@ -1,4 +1,4 @@
-public class Q003_RemoveDuplicates {
+public class Q026_RemoveDuplicates {
     public int removeDuplicates(int[] nums) {
         // Method_01
         int start = 0;

@@ -13,15 +13,9 @@ public class Q189_Rotate {
         // Method_02 2ms
         k = k % nums.length;
         int[] tmp = new int[k];
-        for (int i = 0; i < k; i++) {
-            tmp[i] = nums[nums.length - k + i];
-        }
-        for (int i = nums.length - 1; i >= k; i--) {
-            nums[i] = nums[i - k];
-        }
-        for (int i = 0; i < k; i++) {
-            nums[i] = tmp[i];
-        }
+        System.arraycopy(nums, nums.length - k, tmp, 0, k);
+        System.arraycopy(nums, 0, nums, k, nums.length - k);
+        System.arraycopy(tmp, 0, nums, 0, k);
 
         // Method_03
 
